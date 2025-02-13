@@ -8,15 +8,15 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #ffccd5;
+            background: url('your-background-image.jpg') no-repeat center center/cover;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             flex-direction: column;
+            position: relative;
+            overflow: hidden;
         }
-        <img src="your-image-url.jpg" alt="Valentine Image" width="250">
-
         h1 {
             color: #d6336c;
         }
@@ -39,10 +39,15 @@
             color: white;
             position: absolute;
         }
+        img {
+            width: 250px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>Will you be my Valentine? ❤️</h1>
+    <img src="your-image-url.jpg" alt="Valentine Image">
     <div class="buttons">
         <form action="https://formspree.io/f/xqaedgvr" method="POST">
             <input type="hidden" name="message" value="She said YES! ❤️">
