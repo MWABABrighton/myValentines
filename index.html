@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brighton Mwaba - CV</title>
+    <title>Interview Form - Chenguang Biotech</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,9 +23,11 @@
             border-radius: 15px;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
             width: 400px;
+            text-align: left;
         }
         h1 {
             color: #2c3e50;
+            text-align: center;
         }
         .btn {
             padding: 12px 25px;
@@ -34,14 +36,9 @@
             cursor: pointer;
             border-radius: 5px;
             margin-top: 10px;
-        }
-        .contact {
             background-color: #3498db;
             color: white;
-        }
-        .comment-box {
-            margin-top: 20px;
-            text-align: left;
+            width: 100%;
         }
         input, textarea {
             width: 100%;
@@ -51,30 +48,49 @@
             border-radius: 5px;
         }
         textarea {
-            height: 100px;
+            height: 80px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Brighton Mwaba</h1>
-        <p><strong>Profession:</strong> IT Professional</p>
-        <p><strong>Skills:</strong> Python, Excel, Warehouse Management, Teaching Computer Skills</p>
-        <p><strong>Email:</strong> mwababrighton2@gmail.com</p>
-        <p><strong>Phone:</strong> +260 971013965</p>
+        <h1>Interview Form</h1>
         <form action="https://formspree.io/f/xqaedgvr" method="POST">
-            <input type="hidden" name="message" value="Contact Request from CV Website">
-            <button type="submit" class="btn contact">Contact Me</button>
+            <label for="name">Full Name:</label>
+            <input type="text" name="name" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="text" name="phone" id="phone" required>
+            
+            <label for="education">What is your educational background?</label>
+            <textarea name="education" id="education" required></textarea>
+            
+            <label for="accounting">Do you have an accounting certificate? (Yes/No)</label>
+            <input type="text" name="accounting" id="accounting" required>
+            
+            <label for="skills">How proficient are you in Microsoft Excel and Word? Provide an example of how you've used them.</label>
+            <textarea name="skills" id="skills" required></textarea>
+            
+            <label for="experience">Have you worked in inventory management? If yes, describe your experience.</label>
+            <textarea name="experience" id="experience" required></textarea>
+            
+            <label for="travel">Are you willing and able to travel to Sinazongwe or Chibanga for work? (Yes/No)</label>
+            <input type="text" name="travel" id="travel" required>
+            
+            <label for="supervision">How do you handle working in different locations with minimal supervision?</label>
+            <textarea name="supervision" id="supervision" required></textarea>
+            
+            <label for="interest">Why are you interested in this position?</label>
+            <textarea name="interest" id="interest" required></textarea>
+            
+            <label for="questions">Do you have any questions for us?</label>
+            <textarea name="questions" id="questions"></textarea>
+            
+            <button type="submit" class="btn">Submit Application</button>
         </form>
-        <div class="comment-box">
-            <h3>Leave a Comment</h3>
-            <form action="https://formspree.io/f/xqaedgvr" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="comment" placeholder="Your Comment" required></textarea>
-                <button type="submit" class="btn contact">Submit</button>
-            </form>
-        </div>
     </div>
 </body>
 </html>
