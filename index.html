@@ -12,80 +12,83 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
+            padding: 20px;
         }
-       .container {
-             margin-top: 100px;
-
-
-            background: rgba(255, 255, 255, 0.9);
-            padding: 30px;
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
             border-radius: 15px;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-            max-width: 500px;
+            max-width: 600px;
             width: 100%;
+        }
+        h1 {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.25rem;
+            }
+            .container {
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center">Chenguang Biotech - Interview Form</h1>
+        <h1>Chenguang Biotech - Interview Form</h1>
         <form action="https://formspree.io/f/xqaedgvr" method="POST">
             <div class="mb-3">
                 <label for="name" class="form-label">Full Name:</label>
                 <input type="text" class="form-control" name="name" id="name" required>
             </div>
-            
             <div class="mb-3">
                 <label for="email" class="form-label">Email:</label>
                 <input type="email" class="form-control" name="email" id="email" required>
             </div>
-            
             <div class="mb-3">
                 <label for="phone" class="form-label">Phone Number:</label>
                 <input type="text" class="form-control" name="phone" id="phone" required>
             </div>
-            
             <div class="mb-3">
                 <label for="education" class="form-label">Educational Background:</label>
-                <textarea class="form-control" name="education" id="education" required></textarea>
+                <textarea class="form-control" name="education" id="education" rows="2" required></textarea>
             </div>
-            
             <div class="mb-3">
                 <label for="accounting" class="form-label">Do you have an accounting certificate? (Yes/No)</label>
                 <input type="text" class="form-control" name="accounting" id="accounting" required>
             </div>
-            
             <div class="mb-3">
                 <label for="skills" class="form-label">Excel & Word Proficiency (Provide Example):</label>
-                <textarea class="form-control" name="skills" id="skills" required></textarea>
+                <textarea class="form-control" name="skills" id="skills" rows="2" required></textarea>
             </div>
-            
             <div class="mb-3">
                 <label for="experience" class="form-label">Inventory Management Experience:</label>
-                <textarea class="form-control" name="experience" id="experience" required></textarea>
+                <textarea class="form-control" name="experience" id="experience" rows="2" required></textarea>
             </div>
-            
             <div class="mb-3">
                 <label for="travel" class="form-label">Willing to travel to Sinazongwe or Chibanga? (Yes/No)</label>
                 <input type="text" class="form-control" name="travel" id="travel" required>
             </div>
-            
             <div class="mb-3">
                 <label for="supervision" class="form-label">Handling Minimal Supervision:</label>
-                <textarea class="form-control" name="supervision" id="supervision" required></textarea>
+                <textarea class="form-control" name="supervision" id="supervision" rows="2" required></textarea>
             </div>
-            
             <div class="mb-3">
                 <label for="interest" class="form-label">Why are you interested in this position?</label>
-                <textarea class="form-control" name="interest" id="interest" required></textarea>
+                <textarea class="form-control" name="interest" id="interest" rows="2" required></textarea>
             </div>
-            
             <div class="mb-3">
                 <label for="questions" class="form-label">Do you have any questions for us?</label>
-                <textarea class="form-control" name="questions" id="questions"></textarea>
+                <textarea class="form-control" name="questions" id="questions" rows="2"></textarea>
             </div>
-            
             <button type="submit" class="btn btn-primary w-100">Submit Application</button>
         </form>
     </div>
